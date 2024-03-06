@@ -18,6 +18,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideDatabase(() => getDatabase()),
     FormsModule,
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    IonicModule.forRoot({})
   ],
   providers: [AuthService, {provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig}],
   bootstrap: [AppComponent]
