@@ -1,3 +1,37 @@
-<p>main-menu works!</p>
-<button (click)="signOut()" >LogOut</button>
-<button (click)="newCard()">Nuevatarjeta</button>
+<div class="menu">
+  <button><img src="" alt=""></button>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Productos</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Acerca de</a></li>
+    <!-- <li><a href="#" routerLink="/login">Acerca de</a></li> -->
+    <li><a href="#" (click)="signOut()">Cerrar sesion</a></li>
+  </ul>
+</div>
+<!-- Asegúrate de tener instalada la librería de Ionic -->
+<!-- npm install @ionic/angular ionicons -->
+<div><ion-content>
+    <ion-header>
+      <ion-toolbar>
+        <!-- Agrega el botón de menú con un ícono -->
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Tu Aplicación
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- Contenido de tu página -->
+    <ion-card>
+      <ion-card-header>
+        Contenido de la Página
+      </ion-card-header>
+      <ion-card-content>
+        ¡Hola, este es tu contenido!
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</div>
