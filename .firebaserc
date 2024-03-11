@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "workout-wizard-815f7": {
+      "hosting": {
+        "workout-wizard-fitness": [
+          "workout-wizard-815f7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "workout-wizard-815f7"
+  }
+}
