@@ -2,7 +2,8 @@
   <div class="menu">
     <ul>
       <li><a [routerLink]="['/menu']" href="#">Inicio</a></li>
-      <li><a [routerLink]="['/login']" href="#">Iniciar Sesion</a></li>
+      <li *ngIf="!isLogged" ><a [routerLink]="['/login']" href="#">Iniciar Sesion</a></li>
+      <li *ngIf="isLogged" ><a [routerLink]="['/profile']" href="#">Profile</a></li>
       <li><a [routerLink]="['/musclewiki']" href="#">Wikipedia de Musculos</a></li>
       <li><a [routerLink]="['/diets']" href="#">Dietas</a></li>
       <li><a [routerLink]="['/workouts']" href="#">Entrenamientos</a></li>

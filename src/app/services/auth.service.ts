@@ -14,7 +14,7 @@ export class AuthService {
 
 
 
-  googleSignIn() {
+  googleSignIn(): Promise<any> {
     return this.fireauth.signInWithPopup(new GoogleAuthProvider).then(res => {
 
       this.setuidToken(res);
@@ -25,7 +25,7 @@ export class AuthService {
           }
         }
       });
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/menu']);
 
     }).catch(function (error) {
       alert(ErrorService.convertMessage(error['code']));
@@ -48,7 +48,7 @@ export class AuthService {
     this.fireauth.signInWithEmailAndPassword(email, password).then(res => {
 
       this.setuidToken(res);
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/menu']);
 
     }).catch(function (error) {
       alert(ErrorService.convertMessage(error['code']));
@@ -67,7 +67,7 @@ export class AuthService {
           }
         }
       });
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/menu']);
 
     }).catch(function (error) {
       alert(ErrorService.convertMessage(error['code']));
@@ -97,6 +97,11 @@ export class AuthService {
 
   removeuidToken(){
     localStorage.removeItem("uidtoken");
+  }
+
+  reloadPage() {
+    // Usar el servicio de ubicación para recargar la ventana
+    window.location.reload();
   }
 
 }

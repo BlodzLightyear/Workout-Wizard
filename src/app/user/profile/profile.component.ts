@@ -26,6 +26,7 @@ export class ProfileComponent {
 
   signOut() {
     this.auth.signOut();
+    window.location.reload();
   }
 
 

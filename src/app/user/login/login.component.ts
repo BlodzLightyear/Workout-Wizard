@@ -36,15 +36,21 @@ export class LoginComponent implements OnInit {
     this.card.setAttribute("class", "card");
   }
 
-  signInWithGoogle() {
+  async signInWithGoogle() {
 
-    this.auth.googleSignIn();
-
+    try {
+      await this.auth.googleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+    this.reloadPage();
   }
 
   signOut() {
 
     this.auth.signOut();
+    this.reloadPage();
+
   }
 
   login() {
@@ -60,6 +66,7 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.emailLogin, this.passwordLogin);
     this.emailLogin = "";
     this.passwordLogin = "";
+    this.reloadPage();
 
   }
 
@@ -89,7 +96,12 @@ export class LoginComponent implements OnInit {
     this.passwordRegister = "";
     this.passwordRegister2 = "";
     this.checkboxRegister = false;
+    this.reloadPage();
+  }
 
+  reloadPage() {
+    // Usar el servicio de ubicación para recargar la ventana
+    window.location.reload();
   }
 
 }
