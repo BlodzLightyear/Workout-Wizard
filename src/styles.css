@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo básico del cuerpo de la aplicación */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #00daf7;
+}
+
+/* Estilo del enlace de navegación */
+a {
+  text-decoration: none;
+  color: #333;
+}

@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="menu">
+    <ul>
+      <li><a [routerLink]="['/menu']" href="#">Inicio</a></li>
+      <li><a [routerLink]="['/login']" href="#">Iniciar Sesion</a></li>
+      <li><a [routerLink]="['/musclewiki']" href="#">Wikipedia de Musculos</a></li>
+      <li><a [routerLink]="['/diets']" href="#">Dietas</a></li>
+      <li><a [routerLink]="['/workouts']" href="#">Entrenamientos</a></li>
+      <li><a [routerLink]="['/menu']" href="#">Sobre Nosotros</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

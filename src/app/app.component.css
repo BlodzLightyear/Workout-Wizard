@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+}
+
+.menu {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+.menu li:hover {
+  background-color: #555; /* Cambia el color de fondo en hover */
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu a:hover {
+  text-decoration: underline; /* Subraya el enlace en hover */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+/* Agrega estilos adicionales según tus necesidades */
