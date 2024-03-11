@@ -15,6 +15,9 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { AuthService } from './services/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { DietsComponent } from './main/diets/diets.component';
+import { WorkoutsComponent } from './main/workouts/workouts.component';
+import { MuscleWikiComponent } from './main/muscle-wiki/muscle-wiki.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    MenuComponent
+    MenuComponent,
+    DietsComponent,
+    WorkoutsComponent,
+    MuscleWikiComponent
   ],
   imports: [
     BrowserModule,
