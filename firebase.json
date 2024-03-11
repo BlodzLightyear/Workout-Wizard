@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "workout-wizard-fitness",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
