@@ -16,3 +16,11 @@ a {
   text-decoration: none;
   color: #333;
 }
+
+:root {
+  --color-primary: #f30202;
+  --color-secondary: #f30202;
+  --color-light: #f30202;
+  --color-accent: #b9e9bb;
+  --color-google: #f30202;
+}
