@@ -1,0 +1,68 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.contenedorTarjetas{
+  overflow: auto; /* Puedes usar "scroll" en lugar de "auto" para forzar la aparición del scrollbar incluso si no es necesario */
+  margin: 30px;
+}
+
+.tarjeta {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  transition: transform 0.3s ease; /* Transición al pasar el mouse */
+  margin: 30px;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.imagen {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
+
+.contenido {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* Oculta el estilo predeterminado en algunos navegadores */
+  background-color: #fff;
+  width: 200px;
+  outline: none; /* Elimina el contorno al hacer clic */
+}
+
+select:hover, select:focus {
+  border-color: #3498db; /* Cambia el color del borde al pasar el mouse o al recibir foco */
+}
+
+/* Estilo para las opciones dentro del select */
+select option {
+  background-color: #fff;
+  color: #333;
+}

@@ -1,1 +1,15 @@
-<p>diets works!</p>
+<div class="contenedorTarjetas">
+  <div class="tarjeta" *ngFor="let dieta of dietsArray">
+    <img class="imagen" src="{{ dieta.imagen }}" alt="Imagen de la tarjeta" >
+    <!-- (click)="detalleBoton(person.id)" -->
+    <div class="contenido">
+      <h2>{{ dieta.nombre }}</h2>
+      <p>{{ dieta.descripcion }}</p>
+      <h3>Comidas</h3>
+      <div class="contenido" *ngFor="let comidas of dieta.comidas">
+          <h2>Comida Numero:{{ comidas.id }}</h2>
+          <p>{{ comidas.comida }}</p>
+      </div>
+    </div>
+  </div>
+  </div>
