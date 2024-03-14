@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   passwordRegister: string = "";
   passwordRegister2: string = "";
   checkboxRegister: boolean | any;
+  errorMessage: string = "";
 
   constructor(public auth: AuthService) { }
 
@@ -70,7 +71,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  register() {
+  async register() {
 
     if (this.emailRegister == "") {
       return;
@@ -89,13 +90,16 @@ export class LoginComponent implements OnInit {
       alert("Activa la casilla de Aceptar los términos y condiciones");
       return;
     }
-
-    this.auth.register(this.emailRegister, this.passwordRegister);
-    this.userRegister = "";
-    this.emailRegister = "";
-    this.passwordRegister = "";
-    this.passwordRegister2 = "";
-    this.checkboxRegister = false;
+    try {
+      await this.auth.register(this.emailRegister, this.passwordRegister);
+      this.userRegister = "";
+      this.emailRegister = "";
+      this.passwordRegister = "";
+      this.passwordRegister2 = "";
+      this.checkboxRegister = false;
+    } catch (error) {
+      console.log(error);
+    }
     this.reloadPage();
   }
 

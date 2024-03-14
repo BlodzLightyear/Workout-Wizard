@@ -55,19 +55,18 @@ export class AuthService {
     });
   }
 
-  register(email: string, password: string) {
-
-    this.fireauth.createUserWithEmailAndPassword(email, password).then(res => {
-
+  register(email: string, password: string) : Promise<any>{
+    return this.fireauth.createUserWithEmailAndPassword(email, password).then(res => {
       this.setuidToken(res);
       set(ref(this.database, 'users/' + res.user?.uid), {
         Tareas: {
-          tareaprueba :{
+          tareaprueba: {
             IQ: -120
           }
         }
       });
       this.router.navigate(['/menu']);
+      alert("Usuario creado correctamente");
 
     }).catch(function (error) {
       alert(ErrorService.convertMessage(error['code']));

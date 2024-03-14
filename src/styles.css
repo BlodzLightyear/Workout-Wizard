@@ -23,4 +23,5 @@ a {
   --color-light: #f30202;
   --color-accent: #b9e9bb;
   --color-google: #f30202;
+  --imagenbanner:  url("./assets/bannergym.jpg");
 }

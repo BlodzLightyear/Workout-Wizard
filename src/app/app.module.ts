@@ -18,6 +18,7 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { DietsComponent } from './main/diets/diets.component';
 import { WorkoutsComponent } from './main/workouts/workouts.component';
 import { MuscleWikiComponent } from './main/muscle-wiki/muscle-wiki.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MuscleWikiComponent } from './main/muscle-wiki/muscle-wiki.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),

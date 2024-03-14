@@ -6,12 +6,12 @@
             <form ngNativeValidate>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="email" required name="email" >
+                    <input type="email" [(ngModel)]="emailLogin" required name="email">
                     <label>E-mail</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" required name="password">
+                    <input type="password" required name="password" [(ngModel)] = "passwordLogin">
                     <label>Contraseña</label>
                 </div>
                 <div class="remeber-box">
@@ -25,6 +25,7 @@
                 <div class="google-btn">
                     <span class="google-icon" (click)="signInWithGoogle()">Google</span>
                 </div>
+                <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
             </form>
         </div>
         <!-- === Back Card === -->
@@ -33,26 +34,26 @@
             <form ngNativeValidate>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="text" required name="user">
+                    <input type="text" required name="user" [(ngModel)] = "userRegister">
                     <label>Usuario</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="email" required name="email" >
+                    <input type="email" required name="email" [(ngModel)] = "emailRegister">
                     <label>E-mail</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" required name="password" >
+                    <input type="password" required name="password"  [(ngModel)] = "passwordRegister">
                     <label>Contraseña</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"></span>
-                    <input type="password" required name="password2">
+                    <input type="password" required name="password2" [(ngModel)] = "passwordRegister2">
                     <label>Repite Contraseña</label>
                 </div>
                 <div class="remeber-box">
-                    <label><input type="checkbox" required name="checkbox" >Acepto los términos y condiciones</label>
+                    <label><input type="checkbox" required name="checkbox" [(ngModel)] = "checkboxRegister" >Acepto los términos y condiciones</label>
                 </div>
                 <button type="submit" class="btn" (click)="register()">Crear Cuenta</button>
 
